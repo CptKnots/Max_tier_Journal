@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Dynamic Text Box and List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .textbox-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .button-group {
+            margin-bottom: 20px;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button-group button:hover {
+            background-color: #555;
+        }
+
+        .side-by-side-textboxes {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .side-by-side-textboxes input[type="text"] {
+            width: 200px;
+            margin: 0 10px;
+        }
+
+        .list-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .list-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .list-container li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 5px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Webpage</h1>
+    </header>
+
+    <section>
+        <p>This is a basic webpage created with HTML.</p>
+        <p>You can add more content here.</p>
+
+        <div class="textbox-container">
+            <!-- Buttons above the text box -->
+            <div class="button-group">
+                <button id="button1">Button 1</button>
+                <button>Button 2</button>
+                <button>Button 3</button>
+            </div>
+
+            <!-- Text box with 50-character limit and submit button -->
+            <form action="#">
+                <input type="text" id="inputField" name="inputText" placeholder="Enter up to 50 characters" maxlength="50">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+
+            <!-- Two side-by-side text boxes -->
+            <div class="side-by-side-textboxes">
+                <input type="text" id="textBox1" placeholder="Text Box 1">
+                <input type="text" placeholder="Text Box 2">
+            </div>
+
+            <!-- List container -->
+            <div class="list-container">
+                <h2>Phrases List</h2>
+                <ul id="phraseList"></ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+
+    <script>
+        // Array to store the list of phrases
+        let phrases = [];
+
+        document.getElementById('button1').addEventListener('click', function() {
+            const inputText = document.getElementById('inputField').value;
+            if (inputText) {
+                // Update the first text box
+                document.getElementById('textBox1').value = inputText;
+
+                // Add the phrase to the array
+                phrases.push(inputText);
+
+                // Update the list
+                updatePhraseList();
+
+                // Clear the input field
+                document.getElementById('inputField').value = '';
+            }
+        });
+
+        function updatePhraseList() {
+            const listContainer = document.getElementById('phraseList');
+            listContainer.innerHTML = ''; // Clear existing list
+            phrases.forEach(phrase => {
+                const listItem = document.createElement('li');
+                listItem.textContent = phrase;
+                listContainer.appendChild(listItem);
+            });
+        }
+    </script>
+
+</body>
+</html>

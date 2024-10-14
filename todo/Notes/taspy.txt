@@ -1,0 +1,17 @@
+#define a task and sort it 
+
+from tasks import Tasks
+
+
+
+tasks = input("task: " )
+todo = input("name of todo: ")
+
+class SendTasks:
+    def function(self):
+        #when todo is in (todo_list)
+        put task in todo_list #how will it know what list?
+
+
+todo_list = SendTasks()
+todo.function

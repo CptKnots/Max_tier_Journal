@@ -1,0 +1,79 @@
+from taskmaster import tasks
+
+
+#this is the class of all tasks 
+define class (tasks)
+
+task = {Get VPN, Buy 1 dog, do}
+
+#this function will return a list of tasks related to the class
+def get_tasks
+    for task in class:
+        return task
+
+
+#rank scale is from 1 to 10
+##tasks are return in ranked order 
+
+
+
+1. **Kingdom**
+2. **Phylum**
+3. **Subphylum**
+4. **Class**
+5. **Order*
+6. **Family**
+7. **Genus**
+8. **Species**
+
+
+Kingdom:
+
+Animalia
+Phylum:
+
+Chordata
+Subphylum:
+
+Vertebrata (for vertebrates) or Invertebrata (for invertebrates)
+Class:
+
+Examples include Mammalia (mammals), Aves (birds), Reptilia (reptiles), Amphibia (amphibians), Insecta (insects), etc.
+Order:
+
+Examples include Carnivora (carnivores), Rodentia (rodents), Primates (primates), Artiodactyla (even-toed ungulates), Cetacea (whales and dolphins), etc.
+Family:
+
+Examples include Felidae (cats), Canidae (dogs), Hominidae (great apes and humans), Bovidae (cows, goats), etc.
+Genus:
+
+Examples include Panthera (big cats), Canis (canids), Homo (humans), Equus (horses), etc.
+Species:
+
+Examples include Panthera leo (lion), Canis lupus (gray wolf), Homo sapiens (human), Equus ferus caballus (horse), etc.Certainly! Here are the highest taxonomic levels in the hierarchical classification of animals:
+
+1. **Kingdom:**
+   - Animalia
+
+2. **Phylum:**
+   - Chordata
+
+3. **Subphylum:**
+   - Vertebrata (for vertebrates) or Invertebrata (for invertebrates)
+
+4. **Class:**
+   - Examples include Mammalia (mammals), Aves (birds), Reptilia (reptiles), Amphibia (amphibians), Insecta (insects), etc.
+
+5. **Order:**
+   - Examples include Carnivora (carnivores), Rodentia (rodents), Primates (primates), Artiodactyla (even-toed ungulates), Cetacea (whales and dolphins), etc.
+
+6. **Family:**
+   - Examples include Felidae (cats), Canidae (dogs), Hominidae (great apes and humans), Bovidae (cows, goats), etc.
+
+7. **Genus:**
+   - Examples include Panthera (big cats), Canis (canids), Homo (humans), Equus (horses), etc.
+
+8. **Species:**
+   - Examples include Panthera leo (lion), Canis lupus (gray wolf), Homo sapiens (human), Equus ferus caballus (horse), etc.
+
+These categories represent a basic outline of the hierarchical classification used in taxonomy to categorize and organize animals based on their evolutionary relationships.

@@ -1,0 +1,15 @@
+#this is the class of all tasks 
+define class (vim)
+
+task = {make several copies of a file, 
+name each file differently, create a cheat sheet (6)
+}
+
+#this function will return a list of tasks related to the class
+def get_tasks
+    for task in class:
+        return task
+
+
+
+

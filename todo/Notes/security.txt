@@ -1,0 +1,6 @@
+from taskmaster import tasks
+
+
+define class (security)
+task = {Get VPN, }
+    

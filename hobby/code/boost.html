@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boost Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #e7f5e1;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Find Your Boost!</h1>
+    <p>Enter your current mood level (1 to 10):</p>
+    <input type="number" id="mood" min="1" max="10" value="5">
+    
+    <p>Enter your current HP:</p>
+    <input type="number" id="hp" min="1" max="100" value="50">
+    
+    <br><br>
+    <button onclick="generateBoost()">BOOST</button>
+    
+    <div id="result" class="output"></div>
+</div>
+
+<script>
+    // Define the boosts and their HP values
+    const boosts = [
+        { name: "A small snack", hpRestore: 10 },
+        { name: "A refreshing drink", hpRestore: 20 },
+        { name: "A hearty meal", hpRestore: 40 },
+        { name: "A power nap", hpRestore: 30 },
+        { name: "A boost of fresh air", hpRestore: 15 }
+    ];
+
+    function generateBoost() {
+        let mood = parseInt(document.getElementById('mood').value);
+        let hp = parseInt(document.getElementById('hp').value);
+
+        // Logic for calculating boost based on mood and HP
+        let boost;
+        if (mood > 7) {
+            boost = boosts[0]; // Smaller boost for high mood
+        } else if (mood > 4) {
+            boost = boosts[1]; // Moderate boost for medium mood
+        } else if (mood > 2) {
+            boost = boosts[2]; // Larger boost for lower mood
+        } else {
+            boost = boosts[3]; // Biggest boost for lowest mood
+        }
+
+        // Subtract a fixed amount of HP when clicking the BOOST button
+        let hpLoss = 10; // Fixed HP loss for each boost click
+        hp = hp - hpLoss + boost.hpRestore;
+
+        // Ensure HP does not exceed 100 or fall below 0
+        if (hp > 100) {
+            hp = 100;
+        } else if (hp < 0) {
+            hp = 0;
+        }
+
+        // Display the result
+        document.getElementById('result').innerHTML = `
+            Your boost is: ${boost.name} (Restored ${boost.hpRestore} HP)<br>
+            Your new HP: ${hp}
+        `;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selector</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        #game-result {
+            font-size: 24px;
+            color: #3498db;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #mood-range {
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        #roll-button {
+            background-color: #e74c3c;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #roll-button:hover {
+            background-color: #c0392b;
+        }
+
+        .dice-animation {
+            font-size: 40px;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pick a Game to Play!</h1>
+    
+    <label for="mood-range">Select your mood on a scale of 1 to 10:</label>
+    <input type="range" id="mood-range" min="1" max="10" value="5" oninput="updateMoodDisplay(this.value)">
+    <span id="mood-display">5</span>
+
+    <button id="roll-button" onclick="rollDice()">Roll the Dice 🎲</button>
+    
+    <div id="game-result" class="hidden"></div>
+
+    <script>
+        const games = [
+            { name: "Italian Coffee Break", weight: 1 },
+            { name: "Word Scramble", weight: 1 },
+            { name: "Chess", weight: 1 },
+            { name: "Trivia Blast", weight: 3 },
+            { name: "Sudoku Puzzle", weight: 3 },
+            { name: "Speed Typing", weight: 3 },
+            { name: "Color Match", weight: 3 },
+            { name: "Memory Challenge", weight: 3 }
+        ];
+
+        // Function to roll the dice and randomize game selection
+        function rollDice() {
+            const resultDiv = document.getElementById('game-result');
+            resultDiv.classList.add('dice-animation');
+            resultDiv.classList.remove('hidden');
+            resultDiv.innerHTML = "Rolling... 🎲";
+            
+            setTimeout(() => {
+                const selectedGame = selectRandomGame();
+                resultDiv.innerHTML = "You should try: " + selectedGame + "!";
+                resultDiv.classList.remove('dice-animation');
+            }, 2000);  // simulate dice rolling animation delay
+        }
+
+        // Function to select a random game based on weights
+        function selectRandomGame() {
+            const weightedGames = [];
+            games.forEach(game => {
+                for (let i = 0; i < game.weight; i++) {
+                    weightedGames.push(game.name);
+                }
+            });
+            const randomIndex = Math.floor(Math.random() * weightedGames.length);
+            return weightedGames[randomIndex];
+        }
+
+        // Update mood display as slider changes
+        function updateMoodDisplay(value) {
+            document.getElementById('mood-display').innerHTML = value;
+        }
+    </script>
+
+</body>
+</html>

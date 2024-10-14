@@ -1,0 +1,198 @@
+
+
+
+Readme: Clicks logs successful instances of the program. When a button is clicked, there is no affect logged although that may change. Only when a result is returned does Clicks increment a value to be entered into the engine. A value will alawys be returned even if null is the result of the return. 
+
+V1 
+Create a program that generates fruit for you to eat based on your favorite color as an input.
+
+V2 
+Create a program that generates fruit for you to eat based on your favorite color as an input.  The program will generate either an orange, apple, pear, or grapes depending on which color you select. The colors are blue, red, and yellow. Write logic that uses a random number between one and one hundred plus a color to choose the fruit. For example: Even numbers and blue will provide a response of grapes. Each fruit should have at least 20 numbers that will cause it to be selected as the fruit for you to eat. 
+
+V3 Rerun using old program
+Replace the choice of favorite color with 
+
+V4 Rerun with fresh prompt
+Create a program that generates a "boost" for you to try based on your mood as an input. The program with generate a boost selected from a family of options that include snacks, drinks, sleep, entertainment. Write logic that uses a number called "HP" plus the mood selection to choose the boost. For example the higher the mood the smaller the boost. 
+
+Write logic that causes the HP to be calculated by checking how many times the program has run in the past 24 hours. 
+
+Running the program subtracts HP where using boosts adds back HP. The bigger the boost, the more HP restored.
+
+Algo starts with nada
+Start with a few selections 
+choose to begin automation (select difficulty level) #dw you can change this later
+
+
+
+First use of the day? TF 
+Solve this puzzle
+	[brain game]
+
+What is your mood? #color
+(scale of 1-10) #colors 
+
+Scale = 1 Day, Current Assesment 
+
+Generate a yes or no with weighted values based on ???
+Button 1 = "Need a boost?" 
+	calculate HP 
+		if HP is less than value
+			calculate boost option
+				{ 
+				return 
+					f = [food:: snack:bar,   meal: 
+							
+					d = [drink:: caffine:coffee, decafe:liquid_iv, water, 
+					
+					s = [nap::sleep:duration:.., youtube: games::hearthstone,LoL
+					
+
+					
+					ult = [
+					
+Button 2 = "Life break"
+	calculate HP 
+		if HP is less than value
+			calculate action option
+				{ 
+				return 
+					f = [jam:: snack:bar,   meal: 
+							
+					d = [gym:: caffine:coffee, decafe:liquid_iv, water, 
+					
+					s = [read::sleep:duration:.., youtube: games::hearthstone,LoL
+					
+
+					
+					ult = [					
+Button 3 = "Down hill fast" 
+	calculate traits 
+		if HP is less than value
+			calculate boost option
+				{ 
+				return 
+					f = [vape:: snack:bar,   meal: 
+							
+					d = [drink:: caffine:coffee, decafe:liquid_iv, water, 
+					
+					s = [nap::sleep:duration:.., youtube: games::hearthstone,LoL
+					
+
+					
+					ult = [
+#macro->create-new-item "Hit points"
+	mood: value weight: 10	
+x	
+	[meta:::
+	
+x	today:: stats:num_clicks, clicks:by.cat 
+x	week:: stats 
+x 	month:: stats 
+
+	]
+			
+			
+			
+			
+	#add recalculation and memory 
+	
+#macro->create-new-item "cat"
+cat = [f,d,s,ult,
+
+
+<body>
+	<header>
+		<h1>Short hand assitant</h1>
+	</header>
+	
+	<section>
+		<p>The Instance Accountant was created with HTML.</p>
+		<p>Place a word into Tab 1</p>
+
+Replace 
+Button 1
+Find instance
+
+
+Replace 
+50 characters
+With 
+8 
+
+
+###Box 2 is updated with the input and with a count of the instance occurance
+###Box 3 will display the data graphically 
+
+
+
+#
+Times followed 
+Is it Tuesday? 
+	T = x.8 (boost)
+	else calculate following day's boost
+
+
+
+#first screen 
+##box 
+####Actions
+###new item
+###move item
+		from list 1 to list 2
+###move item
+		from list 2 to list 1
+		where?
+###list 
+####list 1 (F) 
+		new items are added to the false list 
+####list 2 (T)
+###compare list (show rollback)
+		what to do w/ new item
+####options
+####
+###
+List 1
+Volume Tiled Resources
+Conservative Raster
+Raster Order Views
+Tiled Resources
+Typed UAV Access
+Bindless Textures
+Asynchronous Compute
+Diatom Incuts MD A
+Self Referintial 
+
+List 2
+Self Referintial 
+
+###
+
+Mini Game
+[word] of the day
+Used in a sentence? gain a discount boost 
+Havent used in a sentence? Run a 30 second read 
+
+Read(run read program) see promt
+
+
+
+###future###
+
+#can I just give the UI? 
+	(can I give the UI at all...@CK)
+##Can move items 
+##Can show both list
+##can compare list (show rollback)
+###FROM 2 (key) sort 
+
+
+Use Case Ex:
+Standing there and its awkward quiet cause you have nothing to say
+Its the handy dandy .. WHAT IS THE NAME? 
+Could sell it as a climbing [game,solo(wordle),solitare but includes convo9=]? For UI.. 
+
+
+
+9/13/2024 
+Button 2 needs work 

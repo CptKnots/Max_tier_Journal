@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Tabs and Lists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .textbox-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .button-group {
+            margin-bottom: 20px;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button-group button:hover {
+            background-color: #555;
+        }
+
+        .list-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .list-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .list-container li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 5px 0;
+            padding: 10px;
+        }
+
+        .list-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .list-group .list-container {
+            margin: 0 10px;
+            width: 200px;
+        }
+
+        .tabs {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tabs button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .tabs button.active {
+            background-color: #ddd;
+            border-bottom: none;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Webpage</h1>
+    </header>
+
+    <section>
+        <p>This is a basic webpage created with HTML.</p>
+        <p>You can add more content here.</p>
+
+        <div class="textbox-container">
+            <!-- Buttons above the text box -->
+            <div class="button-group">
+                <button id="button1">Button 1</button>
+                <button id="button2">Button 2</button>
+                <button id="button3">Button 3</button>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button id="tab1" class="active">Tab 1</button>
+                <button id="tab2">Tab 2</button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="tabContent1" class="tab-content active">
+                <input type="text" id="inputField" name="inputText" placeholder="Enter up to 50 characters" maxlength="50">
+            </div>
+
+            <div id="tabContent2" class="tab-content">
+                <input type="text" id="inputField2" name="inputText2" placeholder="Enter unlimited text">
+            </div>
+
+            <!-- List containers -->
+            <div class="list-group">
+                <div class="list-container" id="listContainer1">
+                    <h2>Box 1</h2>
+                    <ul id="phraseList1"></ul>
+                </div>
+                <div class="list-container" id="listContainer2">
+                    <h2>Box 2</h2>
+                    <ul id="phraseList2"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+
+    <script>
+        // Arrays to store the lists of phrases
+        let phrases1 = [];
+        let phrases2 = [];
+
+        // Button 1 functionality for Tab 1
+        document.getElementById('button1').addEventListener('click', function() {
+            const inputText = document.getElementById('inputField').value;
+
+            // If phrase already exists in Box 1, move it to Box 2
+            if (phrases1.includes(inputText)) {
+                updateList('phraseList2', phrases2, inputText);
+            } else {
+                updateList('phraseList1', phrases1, inputText);
+            }
+
+            // Clear the input field
+            document.getElementById('inputField').value = '';
+        });
+
+        // Button 2 functionality for Tab 2
+        document.getElementById('button2').addEventListener('click', function() {
+            const inputText = document.getElementById('inputField2').value;
+            updateList('phraseList2', phrases2, inputText);
+
+            // Clear the input field
+            document.getElementById('inputField2').value = '';
+        });
+
+        // Update list function
+        function updateList(listId, phrasesArray, inputText) {
+            if (inputText) {
+                // Add the phrase to the array
+                phrasesArray.push(inputText);
+
+                // Update the corresponding list
+                const listContainer = document.getElementById(listId);
+                listContainer.innerHTML = ''; // Clear existing list
+                phrasesArray.forEach(phrase => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = phrase;
+                    listContainer.appendChild(listItem);
+                });
+            }
+        }
+
+        // Tabs functionality
+        document.getElementById('tab1').addEventListener('click', function() {
+            switchTab('tab1', 'tabContent1');
+        });
+
+        document.getElementById('tab2').addEventListener('click', function() {
+            switchTab('tab2', 'tabContent2');
+        });
+
+        function switchTab(tabId, contentId) {
+            // Remove active class from both tabs
+            document.getElementById('tab1').classList.remove('active');
+            document.getElementById('tab2').classList.remove('active');
+
+            // Hide both content areas
+            document.getElementById('tabContent1').classList.remove('active');
+            document.getElementById('tabContent2').classList.remove('active');
+
+            // Add active class to selected tab and content
+            document.getElementById(tabId).classList.add('active');
+            document.getElementById(contentId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

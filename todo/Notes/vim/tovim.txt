@@ -1,0 +1,7 @@
+cheat sheet:
+copy 
+paste 
+move between windows (terminal and editor)
+new file 
+exit insert mode make ctl + i
+
