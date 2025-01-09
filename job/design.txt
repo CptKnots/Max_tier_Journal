@@ -1,0 +1,80 @@
+Public
+	Job Types:
+		VV Macd 
+
+		VV Install
+			Network Functions
+				Vendor:
+					Jasper
+						MX
+						login
+							ssh22
+						LOGICAL
+							vlan 
+							latency
+						NNI 0
+						PHY
+							arp
+							aggqw
+							aggmcr
+						ACX 0
+						QFX 0
+						EX 0
+							
+					Nike 0
+					Cigma 0
+					Advant 
+						116
+						login 
+							ssh22
+							LOGICAL 0
+							PHY
+								PORT 5 
+									status
+									sfp
+								PORT 8 
+									status
+									sfp
+									rx 
+									mac 
+						logout
+						206 0
+						114 0
+					Rad 0
+					
+			Granite Function:
+				Shelf 0
+				Bandwidth
+				Path
+					Elements 
+						Element
+						Port 0
+						Cloud
+						Update Channel Name
+						Oversubscribe 
+						Update Dynamic Port
+							ATRUNK
+								swap 0
+							ZTRUNK
+								swap 0
+					Associations 
+					Legs
+						Add new leg 
+		CBH 4 Vlan 0
+		BW Upgrade 0
+		New Install 0
+
+
+;if true display KEY Associations
+
+		GrinchMT Function:
+			Path UDA 
+				CBH New Install
+				Add New Evc
+				
+			Shelf
+				Create Shelf 
+			Update Channel Name
+			Oversubscribe
+
+ 
