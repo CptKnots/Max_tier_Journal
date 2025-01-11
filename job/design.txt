@@ -17,9 +17,9 @@ Public
 							arp
 							aggqw
 							aggmcr
-						ACX 0
-						QFX 0
-						EX 0
+						Amodel 0
+						Qmodel 0
+						Emodel 0
 							
 					Nike 0
 					Cigma 0
@@ -42,7 +42,7 @@ Public
 						114 0
 					Rad 0
 					
-			Granite Function:
+			GrinchMT Function:
 				Shelf 0
 				Bandwidth
 				Path
@@ -60,7 +60,7 @@ Public
 					Associations 
 					Legs
 						Add new leg 
-		CBH 4 Vlan 0
+		TBH 4 Vlan 0
 		BW Upgrade 0
 		New Install 0
 
