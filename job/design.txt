@@ -1,21 +1,42 @@
-Public
 	Job Types:
-		VV Macd 
+		VV MD 
 
-		VV Install
-			Network Functions
-				Vendor:
+#provide ID as an argument of VV_Ins,
+#create ScoffQueue by pasting queue into  
+		VV_Ins(ID)
+			ScoffQueue
+				MA
+				PF
+				CID
+				GSN
+				PN
+				PV
+				SV
+				SN
+				BW
+				ZN
+				COS
+				UT
+				LC
+				WV
+				
+			Newt Functions
+				Model:
 					Jasper
-						MX
-						login
-							ssh22
-						LOGICAL
-							vlan 
-							latency
-						NNI 0
-						PHY
-							arp
-							aggqw
+						Mmodel
+							login
+								ssh22
+									input_emx
+							LOGICAL
+								vlan 
+									pv
+									input_sv
+								latency
+									input_
+							NNI 0
+							PHY
+								arp
+								aggqw
 							aggmcr
 						Amodel 0
 						Qmodel 0
@@ -24,7 +45,9 @@ Public
 					Nike 0
 					Cigma 0
 					Advant 
-						116
+						6
+						4
+						1
 						login 
 							ssh22
 							LOGICAL 0
@@ -38,14 +61,21 @@ Public
 									rx 
 									mac 
 						logout
-						206 0
-						114 0
+						62 0
+						
 					Rad 0
-					
+						2
+						22
+						
+						
 			GrinchMT Function:
-				Shelf 0
-				Bandwidth
+				Shelf 
+					run_ScoutOrdr(RVA,BT,BW)
+						build_model_
+						
 				Path
+					
+				Bandwidth
 					Elements 
 						Element
 						Port 0
@@ -53,28 +83,26 @@ Public
 						Update Channel Name
 						Oversubscribe 
 						Update Dynamic Port
-							ATRUNK
+							ATK
 								swap 0
-							ZTRUNK
+							ZTK
 								swap 0
 					Associations 
 					Legs
-						Add new leg 
-		TBH 4 Vlan 0
-		BW Upgrade 0
-		New Install 0
+						Add new leg
+							name leg v/P
+							re-name: v/S
+		TBH
+		TBH add 0
+		BW up 0
+		BW down
+		EA
+		
+		 0
 
 
 ;if true display KEY Associations
 
-		GrinchMT Function:
-			Path UDA 
-				CBH New Install
-				Add New Evc
-				
-			Shelf
-				Create Shelf 
-			Update Channel Name
-			Oversubscribe
 
+		
  
