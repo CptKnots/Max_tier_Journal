@@ -1,3 +1,4 @@
+MAIN
 	Job Types:
 		VV MD 
 
@@ -22,34 +23,44 @@
 				
 			Newt Functions
 				Model:
-					Jasper
-						Mmodel
+					Gemini
+						1_make
 							login
-								ssh22
-									input_emx
+								port
+									grinch_emx
 							LOGICAL
 								vlan 
 									pv
-									input_sv
+									scoffq_pv
+									scoffq_sv
 								latency
-									input_
+									grinch_nni1
+									grinch_nni1
 							NNI 0
 							PHY
 								arp
+									newt(advant_port_8_mac)
 								aggqw
-							aggmcr
-						Amodel 0
-						Qmodel 0
-						Emodel 0
+									newt(lacp_ap8m)
+								aggmcr
+									newt(sidn-m)
+						1_model 0
+						1_model 0
+						1_model 0
 							
 					Nike 0
+						2
+						scoffq_pv
+						scoffq_sv	
+						scoffq_nni1
+						scoffq_nni2
 					Cigma 0
-					Advant 
+					Apha
 						6
 						4
 						1
 						login 
-							ssh22
+							port
 							LOGICAL 0
 							PHY
 								PORT 5 
@@ -63,10 +74,9 @@
 						logout
 						62 0
 						
-					Rad 0
+					Reno 0
 						2
 						22
-						
 						
 			GrinchMT Function:
 				Shelf 
@@ -74,7 +84,7 @@
 						build_model_
 						
 				Path
-					
+					self(VV_Ins)
 				Bandwidth
 					Elements 
 						Element
