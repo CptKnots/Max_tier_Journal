@@ -1,5 +1,4 @@
-	Job Types:
-		VV MD 
+VV_Ins
 
 #provide ID as an argument of VV_Ins,
 #create ScoffQueue by pasting queue into  
@@ -20,89 +19,105 @@
 				LC
 				WV
 				
-			Newt Functions
-				Model:
-					Jasper
-						Mmodel
-							login
-								ssh22
-									input_emx
-							LOGICAL
-								vlan 
-									pv
-									input_sv
-								latency
-									input_
-							NNI 0
-							PHY
-								arp
-								aggqw
-							aggmcr
-						Amodel 0
-						Qmodel 0
-						Emodel 0
-							
-					Nike 0
-					Cigma 0
-					Advant 
-						6
-						4
-						1
-						login 
-							ssh22
-							LOGICAL 0
-							PHY
-								PORT 5 
-									status
-									sfp
-								PORT 8 
-									status
-									sfp
-									rx 
-									mac 
-						logout
-						62 0
-						
-					Rad 0
-						2
-						22
-						
-						
-			GrinchMT Function:
-				Shelf 
+			Epac
+				
+				CIP
+				ZIP 
+				
+
+			GrinchMT: #are sequencial 
+				Shelf:: 
 					run_ScoutOrdr(RVA,BT,BW)
 						build_model_
 						
 				Path
+					self(VV_Ins)::
+					Associations::
+						{ 
+							look up
+							reserve
+							move evc to ACE
+						}	
+					Legs::
+						(Delete, Create v/P, Create v/S)
+						
+					Elements:: 
+							{
+								Aport
+								Cloud
+								Element
+								Update Channel Name
+								Oversubscribe 
+								Update Handoffs
+									vMap::
+										{	
+											AT
+											ZT
+										}
+									HOname::
+										}
+											XCX
+											EP
+										}
+								BW
+								Status to Designed 
+							}
+						
 					
-				Bandwidth
-					Elements 
-						Element
-						Port 0
-						Cloud
-						Update Channel Name
-						Oversubscribe 
-						Update Dynamic Port
-							ATK
-								swap 0
-							ZTK
-								swap 0
-					Associations 
-					Legs
-						Add new leg
-							name leg v/P
-							re-name: v/S
-		TBH
-		TBH add 0
-		BW up 0
-		BW down
-		EA
-		
-		 0
+			Newt Functions
+					Apha
+						6
+						login (zip)::
+						::{
+							show ports
+								return(p8m)
+							show port 5
+								return(nst,nfp,gp5)
+							logout
+						}
 
+					Gemini
+						Ron
+							login(cip)::
+								newt
+									[
+										::{
+										(arp_pam)
+											return(aggq)
+											}
+										::{
+										(lacp_aggq)
+											if et then 
+												else:
+											}	
+									]
+								aggmcr
+									sidn-m::
+								vlan:: 
+									pv(vidreef)
+									sv(vidreef)
+								latency::
+									grinch_nni1
+									grinch_nni1
 
-;if true display KEY Associations
-
-
-		
- 
+					Nike
+								vlan:: 
+									pv(vidreef)
+									sv(vidreef)
+								nni::
+									pn(spdm)
+										return(apn)
+									sn(spdm)
+										return(apn)
+									
+						
+						
+						
+Array>
+1-6
+q-t
+{
+	x=1
+	+x = X
+	X-N
+}
