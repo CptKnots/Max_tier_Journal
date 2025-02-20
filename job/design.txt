@@ -3,9 +3,9 @@ MAIN
 		VV MD 
 
 #provide ID as an argument of VV_Ins,
-#create ScoffQueue by pasting queue into  
-		VV_Ins(ID)
-			ScoffQueue
+#create ScoffQueue by passing dataset into Job Type filter 
+		SQ(VV_Ins)
+			Filter #panda
 				MA
 				PF
 				CID
@@ -20,6 +20,8 @@ MAIN
 				UT
 				LC
 				WV
+;if true bind KEY in keyfile
+	then print KEY Associations(Newt,Grinch,Seeza)
 				
 			Newt Functions
 				Model:
@@ -78,7 +80,7 @@ MAIN
 						2
 						22
 						
-			GrinchMT Function:
+			Grinch:
 				Shelf 
 					run_ScoutOrdr(RVA,BT,BW)
 						build_model_
@@ -111,7 +113,7 @@ MAIN
 		 0
 
 
-;if true display KEY Associations
+
 
 
 		
